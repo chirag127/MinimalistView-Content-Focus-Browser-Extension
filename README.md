@@ -1,0 +1,2 @@
+# Minimalist Mode Browser Extension
+ 
