@@ -1,87 +1,98 @@
-# Bug Report
-
-Thank you for helping us improve the FocusFlow Browser Extension! Please provide as much detail as possible to help us diagnose and fix the issue.
-
 ---
+name: Bug Report
+about: Report a bug or unexpected behavior.
+title: "[BUG] - "
+labels: bug, needs-triage
+assignees: ""
 
-**Before submitting:**
+body:
+  - type: markdown
+    attributes:
+      value: | # THIS IS MANDATORY AND MUST NOT BE REMOVED
+        ## APEX TECHNICAL AUTHORITY DIRECTIVE: BUG REPORT PROTOCOL
 
-*   **Search:** Please search the existing [Issues](https://github.com/chirag127/FocusFlow-Distraction-Free-Browser-Extension/issues) to see if this bug has already been reported.
-*   **Reproducibility:** Can you reliably reproduce the bug? If so, please detail the steps.
+        Please provide a clear and concise description of the bug. The more information you provide, the faster we can diagnose and resolve the issue. All bug reports are processed using the **ZenFlow-Distraction-Free-Reading-Browser-Extension** development standards, ensuring rapid identification and resolution.
 
----
+        **Repository:** `https://github.com/chirag127/ZenFlow-Distraction-Free-Reading-Browser-Extension`
 
-## 1. Bug Description
+        **Prime Directive:** Zero-Defect, High-Velocity, Future-Proof.
 
-A clear and concise description of what the bug is.
+  - type: input
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide a step-by-step guide that allows us to reproduce the behavior.
+        * **Example:**
+          1. Go to `https://example.com`
+          2. Click the extension icon.
+          3. Observe the console output.
+      placeholder: | 
+        1. Navigate to [URL]
+        2. Perform action X
+        3. Observe the unexpected behavior
+    validations:
+      required: true
 
----
+  - type: input
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: | 
+        What did you expect to happen after performing the steps above?
+      placeholder: | 
+        The extension should [describe expected outcome]
+    validations:
+      required: true
 
-## 2. Steps to Reproduce
+  - type: input
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: | 
+        What actually happened?
+      placeholder: | 
+        The extension did [describe actual outcome]
+    validations:
+      required: true
 
-Provide a step-by-step guide to reproduce the bug. Be specific!
+  - type: textarea
+    id: environment_details
+    attributes:
+      label: Environment Details
+      description: | 
+        Please provide information about your environment.
+        *   **Browser & Version:** (e.g., Chrome 120.0.0, Firefox 115.0)
+        *   **Operating System:** (e.g., Windows 11, macOS Sonoma 14.2)
+        *   **Extension Version:** (If known, or specify 'latest')
+        *   **Specific Web Page URL(s):** (If the bug is page-specific)
+      placeholder: | 
+        Browser & Version: 
+        Operating System: 
+        Extension Version: 
+        URL(s): 
+    validations:
+      required: true
 
-1.  Go to...
-2.  Click on...
-3.  Observe that...
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context (Optional)
+      description: | 
+        Provide any other context about the problem. Screenshots, logs, or relevant configuration details are highly appreciated.
+        *   **Screenshots:** (Attach or link to screenshots)
+        *   **Console Logs:** (Copy and paste relevant error messages)
+      placeholder: | 
+        Add any other information here.
+    validations:
+      required: false
 
----
+  - type: markdown
+    attributes:
+      value: | # MANDATORY SECTION FOR LOG INSIGHT
+        ## LOG INSIGHT PROTOCOL (FOR DEVELOPER USE ONLY)
 
-## 3. Expected Behavior
+        **APEX AI AGENT DIRECTIVE:** Upon submission, the AI Agent will analyze the provided bug report, correlate it with the latest codebase version (`https://github.com/chirag127/ZenFlow-Distraction-Free-Reading-Browser-Extension`), and attempt to identify the root cause and potential fixes. Engineers will then review and implement. 
 
-What did you expect to happen?
-
----
-
-## 4. Actual Behavior
-
-What actually happened? Please include any error messages displayed.
-
----
-
-## 5. Environment
-
-*   **Extension Version:** (If known)
-*   **Browser:** (e.g., Chrome, Firefox, Edge)
-*   **Browser Version:** (e.g., 126.0.6478.127)
-*   **Operating System:** (e.g., Windows 11, macOS Sonoma 14.5, Ubuntu 22.04)
-*   **Website(s) Affected:** (If applicable, e.g., `example.com`)
-
----
-
-## 6. Screenshots or Videos
-
-If possible, please attach screenshots or a short video demonstrating the bug. This is extremely helpful!
-
----
-
-## 7. Additional Context
-
-Any other information that might be relevant. For example:
-
-*   What were you trying to achieve when the bug occurred?
-*   Are there any specific configurations or settings you are using?
-*   Does the bug happen in incognito/private browsing mode?
-
----
-
-## 8. AI Agent Directives - Debugging Assistance
-
-This section is for AI agents to provide specific debugging context. Please do not modify it unless instructed.
-
-yaml
-repository: https://github.com/chirag127/FocusFlow-Distraction-Free-Browser-Extension
-expertise: BrowserExtension-TypeScript-Frontend
-focus: Distraction-Free-Reading
-stack:
-  - TypeScript
-  - Vite
-  - WXT (or similar extension framework)
-  - DOM Manipulation
-  - CSS Injection
-verification_commands:
-  - Run `vitest` for unit tests.
-  - Run `playwright test` for E2E tests.
-  - Inspect browser console logs for errors.
-  - Use browser developer tools for DOM/CSS analysis.
-
+        * **Current Tech Stack:** TypeScript, React, Vite, TailwindCSS (refer to `AGENTS.md` for full details)
+        * **Verification:** AI Agent will cross-reference with current linting (`Biome`), testing (`Vitest`, `Playwright`), and build (`Vite`) outputs.
